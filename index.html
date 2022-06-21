@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+   <link rel="stylesheet" href="/css/index.css">
+
+</head>
+
+<body>
+
+   <div class="header">
+      <div id="fullpage">
+
+         <div class="section A13">
+            <img loading="lazy" class="backA13" src="/assets/images/darker.png" alt="" />
+            <img loading="lazy" src="/assets/images/logo.png" alt="logo" class="logo">
+            <div class="header_burger" id="header_burger">
+               <span class="spanBurger"></span>
+            </div>
+            <nav class="header_menu" id="header_menu">
+               <div class="header_buttons">
+                  <ul class="header_list" id="header_list">
+                     <li>
+                        <a class="sulka" href="javascript://0">a13 GHOST</a>
+                     </li>
+                     <li>
+                        <a class="sulka" href="javascript://0">a11 </a>
+                     </li>
+                     <li>
+                        <a class="sulka" href="javascript://0">a10 </a>
+                     </li>
+                     <li>
+                        <a class="sulka" href="javascript://0">Aventi</a>
+                     </li>
+                     <li>
+                        <a class="sulka" href="javascript://0">concierge</a>
+                     </li>
+                     <li>
+                        <a class="sulka" href="javascript://0">privacy policy</a>
+                     </li>
+                     <!-- <li> -->
+                     <div class="button">Register your interest for a13</div>
+                     <!-- </li> -->
+                  </ul>
+               </div>
+            </nav>
+            <div class="content">
+               <h1 class="click">A13</h1>
+               <p>The most complex single piece of sapphire in watchmaking - suspended over
+                  our first 100% Swiss-made tourbillon: the GT-01S.</p>
+               <div class="button">Discover</div>
+
+            </div>
+            <span class="spanBottom"></span>
+         </div>
+         <div class="section aventi" onmouseover="mouselog()">
+            <video autoplay muted loop preload="auto" id="myVideo">
+               <source src="assets/videos/Aventi.mp4" type="video/mp4">
+            </video>
+            <video autoplay muted loop preload="auto" id="myVideoMobile">
+               <source src="assets/videos/AventiMobile.mp4" type="video/mp4">
+            </video>
+            <div class="content">
+
+               <h1>Aventi</h1>
+               <p>Aventi - more than watchmaking.
+                  Bringing a supercar to your wrist.</p>
+               <div class="button">Discover</div>
+
+            </div>
+            <span class="spanBottom"></span>
+         </div>
+         <div class="section concierge">
+            <img loading="lazy" class="backA13" src="/assets/images/ThirtySlide.jpg" alt="" />
+            <div class="content">
+               <h1>Concierge</h1>
+               <p>Enter the Aventi concierge.<br>
+                  We will personally answer any of your questions.</p>
+               <div class="button">Book Appointment</div>
+
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+
+   <script>
+      new fullpage('#fullpage', {
+         autoScrolling: true,
+         scrollHorizontally: true,
+         navigation: true,
+         anchors: ['section1', 'section2', 'section3'],
+         navigationTooltips: ['A13', 'AVENTI', 'CONCIERGE'],
+         showActiveTooltip: true,
+         licenseKey: 'YOUR_KEY_HERE'
+      });
+      document.querySelector('.header_burger').addEventListener("click", function () {
+         if (this.classList.contains('active')) {
+            document.getElementById('header_menu').classList.remove('active');
+            document.getElementById('header_list').classList.remove('active');
+            document.getElementById('header_burger').classList.remove('active');
+         } else {
+            document.getElementById('header_menu').classList.add('active');
+            document.getElementById('header_list').classList.add('active');
+            document.getElementById('header_burger').classList.add('active');
+         }
+      });
+      window.addEventListener("click", function () {
+         document.querySelector('#myVideo').play();
+         document.querySelector('#myVideoMobile').play();
+      })
+      // document.querySelector('a[href*="#section2"]').addEventListener("mouseup", function () {
+      //    document.querySelector('#myVideo').play();
+      // })
+      // document.querySelector('a[href*="#section2"]').addEventListener("touchend", function () {
+      //    document.querySelector('#myVideo').play();
+      // })
+
+      // window.addEventListener('scroll', function () {
+      //    document.getElementById('showScroll').innerHTML = pageYOffset + 'px';
+      // });
+      function mouselog() {
+         document.querySelector('#myVideo').play();
+         document.querySelector('#myVideoMobile').play();
+      }
+
+   </script>
+</body>
+
+</html>
